@@ -4,8 +4,8 @@ import java.awt.Color;
 
 
 public class LPiece extends Piece{
-	public LPiece() {
-		super();
+	public LPiece(Board board) {
+		super(board);
 		myColor = Color.ORANGE;
 		x = 5;
 		y = 5;

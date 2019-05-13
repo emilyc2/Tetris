@@ -20,7 +20,7 @@ public class Board {
 		return board;
 	}
 	public void startPiece() {
-		activePiece = new TPiece();
+		activePiece = new TPiece(this);
 	}
 	public Piece getActivePiece() {
 		return activePiece;
@@ -36,5 +36,14 @@ public class Board {
 		}
 		return board[row][column].getColor();
 		
+	}
+	public void stop() {
+		board[activePiece.getY()][activePiece.getX()].setColor(activePiece.getColor());
+		board[activePiece.getY()][activePiece.getX()].setActive(true);
+		for(int i =0; i<3; i++) {
+			board[activePiece.getProjectionY(i)][activePiece.getProjectionX(i)].setColor(activePiece.getColor());
+			board[activePiece.getProjectionY(i)][activePiece.getProjectionX(i)].setActive(true);
+		}
+		activePiece = new SPiece(this);
 	}
 }

@@ -4,8 +4,8 @@ import java.awt.Color;
 
 
 public class IPiece extends Piece{
-	public IPiece() {
-		super();
+	public IPiece(Board board) {
+		super(board);
 		myColor = Color.CYAN;
 		x = 5;
 		y = 5;

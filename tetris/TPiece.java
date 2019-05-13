@@ -4,8 +4,8 @@ import java.awt.Color;
 
 
 public class TPiece extends Piece{
-	public TPiece() {
-		super();
+	public TPiece(Board board) {
+		super(board);
 		myColor = Color.MAGENTA;
 		x = 5;
 		y = 5;

@@ -4,8 +4,8 @@ import java.awt.Color;
 
 
 public class ZPiece extends Piece{
-	public ZPiece() {
-		super();
+	public ZPiece(Board board) {
+		super(board);
 		myColor = Color.RED;
 		x = 5;
 		y = 5;

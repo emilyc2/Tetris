@@ -4,8 +4,8 @@ import java.awt.Color;
 
 
 public class JPiece extends Piece{
-	public JPiece() {
-		super();
+	public JPiece(Board board) {
+		super(board);
 		myColor = Color.BLUE;
 		x = 5;
 		y = 5;
